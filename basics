@@ -1,0 +1,1665 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "P.C - Curso Introductorio Python | EDVAI.ipynb",
+      "provenance": [],
+      "toc_visible": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hjVzTzFObC1A"
+      },
+      "source": [
+        "\n",
+        "<img src=\"https://i.ibb.co/PQjhtPK/Logo-Datos-Vivos.png\" width=\"400px\"> \n",
+        "\n",
+        "# Curso Introductorio de Python\n",
+        "\n",
+        "Publicado por [Escuela de Datos Vivos](https://escueladedatosvivos.ai/) (EDVAI) | [Página oficial del curso](https://escueladedatosvivos.ai/p/curso-gratuito-introduccion-a-python)\n",
+        "\n",
+        "Seguinos en las redes para mas contenido:\n",
+        " [Instagram](https://www.instagram.com/escueladedatosvivos/) | [Linkedin](https://www.linkedin.com/company/escuela-de-datos-vivos/) | [Twitter](https://twitter.com/datos_vivos) \n",
+        "\n",
+        "Canal de [YouTube](https://www.youtube.com/c/Escueladedatosvivosai).\n",
+        "\n",
+        "<br>\n",
+        "\n",
+        "\n",
+        "Profesor: [Pablo Casas](https://www.linkedin.com/in/pcasas/).\n",
+        "\n",
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cI2oLEoSbIYs"
+      },
+      "source": [
+        "# C.1) Estructuras de control y funciones clásicas"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "J3Ep-qUGdjVB"
+      },
+      "source": [
+        "### 1) Nuestro amigo el **IF**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1LySJL4YbPIe",
+        "outputId": "f2c4934f-369e-4674-e38d-41e1141d5b7a"
+      },
+      "source": [
+        "nro_de_cliente=999\n",
+        "\n",
+        "if nro_de_cliente==999:\n",
+        "  print('es el cliente 999!!')\n",
+        "else:\n",
+        "  print('cliente no encontrado :(')"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "es el cliente 999!!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "67gC1BqWgaQ8"
+      },
+      "source": [
+        "nro_de_cliente=13151"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yyMPrDjAezyW",
+        "outputId": "156cac75-df46-452e-f32a-23dd6a7d037b"
+      },
+      "source": [
+        "# if anidado\n",
+        "if nro_de_cliente==999:\n",
+        "  print('es el cliente 999!!')\n",
+        "elif nro_de_cliente==111:\n",
+        "  print('es el cliente 111!!')\n",
+        "else:\n",
+        "  print('cliente no encontrado :(')"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "cliente no encontrado :(\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xajuQeX8hBOH"
+      },
+      "source": [
+        "Igual: x1 == x2\n",
+        "\n",
+        "Distinto: x1 != x2\n",
+        "\n",
+        "Menor a: x1 < x2\n",
+        "\n",
+        "Menor o igual a: x1 <= x2\n",
+        "\n",
+        "Mayor a: x1 > x2\n",
+        "\n",
+        "Mayor o igual x1 >= x2\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9YMSatf7GdTg"
+      },
+      "source": [
+        "### 2) *Mientras* vemos el `while`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "QVSbcls-fU0Q"
+      },
+      "source": [
+        "# imprimir 3 elementos\n",
+        "i=0\n",
+        "while(i<3):\n",
+        "  i=i+1\n",
+        "  print(i)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xHKV5FmfQuIL",
+        "outputId": "d4571e00-02e8-4770-f4c4-02d8138300f6"
+      },
+      "source": [
+        "# bucle infinito\n",
+        "while(1):\n",
+        "  x1=input('¿Nombre? ')\n",
+        "\n",
+        "  if x1=='me aburri':\n",
+        "    break\n",
+        "  \n",
+        "  print('Bienvenido! ' + x1)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "¿Nombre? elon\n",
+            "Bienvenido! elon\n",
+            "¿Nombre? me aburri\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "RAZYEnPnh9lG"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bSL5eukOGqWt"
+      },
+      "source": [
+        "### 3) *Para* que usar while, si hay `for`!"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HU0HEgXxG0YX"
+      },
+      "source": [
+        "lista=[1,2,3,4]"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vawmdM8uU-dH",
+        "outputId": "40c94948-24d2-4478-e71d-2aecb3c5122d"
+      },
+      "source": [
+        "for i in lista:\n",
+        "  \n",
+        "  if i == 3:\n",
+        "    break\n",
+        "  \n",
+        "  print(i)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "2\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nL1rI-ECZ0ny"
+      },
+      "source": [
+        "¿Cómo usar for sobre pandas data frame?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tIs6PtDOVt2v"
+      },
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "d_star_wars=pd.read_csv(filepath_or_buffer=\"https://raw.githubusercontent.com/pablo14/datasets/main/star_wars/starwars.csv\", sep=',')\n",
+        "d_star_wars.head()\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wTZNFp3pYgIx"
+      },
+      "source": [
+        "# no hacer asi\n",
+        "for row in d_star_wars:\n",
+        "  print(row)\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "mJ7MF-pYZOn0"
+      },
+      "source": [
+        "# Usar iterrows()\n",
+        "\n",
+        "for label, row in d_star_wars[:5].iterrows():\n",
+        "  print('El label es: ' + label))\n",
+        "  print(row)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1NfhynzId6GV"
+      },
+      "source": [
+        "Accediendo a cada valor:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_2lhjKIWbZ8a",
+        "outputId": "a2997dfa-21b5-4066-eb7b-05fdd689ba81"
+      },
+      "source": [
+        "for _, row in d_star_wars[:5].iterrows():\n",
+        "  print('Personaje: ' + row['name'] + ' lugar ' + row['homeworld'])"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Personaje: Luke Skywalker lugar Tatooine\n",
+            "Personaje: C-3PO lugar Tatooine\n",
+            "Personaje: R2-D2 lugar Naboo\n",
+            "Personaje: Darth Vader lugar Tatooine\n",
+            "Personaje: Leia Organa lugar Alderaan\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "BpomojcFHSdC"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YwD3bxuAHNMr"
+      },
+      "source": [
+        "### 4) ¿Cómo crear funciones en Python?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "FWOLiXGWG7WW"
+      },
+      "source": [
+        "def mi_funcion():\n",
+        "  print('hola mundo')"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zh6u37TAgMEi",
+        "outputId": "e81d0f76-a1a5-4f32-c9bf-c763ee8fbeed"
+      },
+      "source": [
+        "mi_funcion()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "hola mundo\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3bTI57ZogYXR"
+      },
+      "source": [
+        "¿Cómo crear una función con parámetros?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "yytTT0DbgOrv"
+      },
+      "source": [
+        "def sumar(x1, x2):\n",
+        "  return x1+x2"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c2gtCG9LiL89",
+        "outputId": "40c47eb5-adde-4f04-ac98-e74b200d1630"
+      },
+      "source": [
+        "sumar(x1=1, x2=1)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 45
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "sZIbimJihxyR"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TFYnkSUyifyw"
+      },
+      "source": [
+        "¿Cómo explorar el contenido de una función?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "79amaexLhSnT"
+      },
+      "source": [
+        "%%capture\n",
+        "pip install funpymodeling"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ML9ZMIp1hOlc"
+      },
+      "source": [
+        "from funpymodeling.exploratory import status"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "kD7lTHFrhinh"
+      },
+      "source": [
+        "??status"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 386
+        },
+        "id": "tfBfa_3Dhjuk",
+        "outputId": "d94e43f2-616a-4336-e2ef-aac9a3f8b6ad"
+      },
+      "source": [
+        "status(d_star_wars)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/html": [
+              "<div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>variable</th>\n",
+              "      <th>q_nan</th>\n",
+              "      <th>p_nan</th>\n",
+              "      <th>q_zeros</th>\n",
+              "      <th>p_zeros</th>\n",
+              "      <th>unique</th>\n",
+              "      <th>type</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>name</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.000000</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>87</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>height</td>\n",
+              "      <td>6</td>\n",
+              "      <td>0.068966</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>45</td>\n",
+              "      <td>float64</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>mass</td>\n",
+              "      <td>28</td>\n",
+              "      <td>0.321839</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>38</td>\n",
+              "      <td>float64</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>hair_color</td>\n",
+              "      <td>5</td>\n",
+              "      <td>0.057471</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>12</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>skin_color</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.000000</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>31</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>5</th>\n",
+              "      <td>eye_color</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.000000</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>15</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>6</th>\n",
+              "      <td>birth_year</td>\n",
+              "      <td>44</td>\n",
+              "      <td>0.505747</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>36</td>\n",
+              "      <td>float64</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7</th>\n",
+              "      <td>sex</td>\n",
+              "      <td>4</td>\n",
+              "      <td>0.045977</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>4</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>8</th>\n",
+              "      <td>gender</td>\n",
+              "      <td>4</td>\n",
+              "      <td>0.045977</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>2</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>9</th>\n",
+              "      <td>homeworld</td>\n",
+              "      <td>10</td>\n",
+              "      <td>0.114943</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>48</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10</th>\n",
+              "      <td>species</td>\n",
+              "      <td>4</td>\n",
+              "      <td>0.045977</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.0</td>\n",
+              "      <td>37</td>\n",
+              "      <td>object</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>"
+            ],
+            "text/plain": [
+              "      variable  q_nan     p_nan  q_zeros  p_zeros  unique     type\n",
+              "0         name      0  0.000000        0      0.0      87   object\n",
+              "1       height      6  0.068966        0      0.0      45  float64\n",
+              "2         mass     28  0.321839        0      0.0      38  float64\n",
+              "3   hair_color      5  0.057471        0      0.0      12   object\n",
+              "4   skin_color      0  0.000000        0      0.0      31   object\n",
+              "5    eye_color      0  0.000000        0      0.0      15   object\n",
+              "6   birth_year     44  0.505747        0      0.0      36  float64\n",
+              "7          sex      4  0.045977        0      0.0       4   object\n",
+              "8       gender      4  0.045977        0      0.0       2   object\n",
+              "9    homeworld     10  0.114943        0      0.0      48   object\n",
+              "10     species      4  0.045977        0      0.0      37   object"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 49
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W_QZcSykjzzU",
+        "outputId": "34e90543-7da2-4827-b406-04433dc01442"
+      },
+      "source": [
+        "d_star_wars.nunique().values\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([87, 45, 38, 12, 31, 15, 36,  4,  2, 48, 37])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 51
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2sSjW66_lCgn",
+        "outputId": "1a9f91f5-2ace-466a-d9ac-a11c05022902"
+      },
+      "source": [
+        "d_star_wars.columns"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "Index(['name', 'height', 'mass', 'hair_color', 'skin_color', 'eye_color',\n",
+              "       'birth_year', 'sex', 'gender', 'homeworld', 'species'],\n",
+              "      dtype='object')"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 53
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hDe0C5AZjJ6m"
+      },
+      "source": [
+        "def status2(data):\n",
+        "  return pd.DataFrame({'variables': data.columns, 'valores_unicos':data.nunique().values})"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 386
+        },
+        "id": "yPMsycHylW8e",
+        "outputId": "0662a48a-78d4-4b7d-b389-31594935465d"
+      },
+      "source": [
+        "status2(d_star_wars)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/html": [
+              "<div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>variables</th>\n",
+              "      <th>valores_unicos</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>name</td>\n",
+              "      <td>87</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>height</td>\n",
+              "      <td>45</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>mass</td>\n",
+              "      <td>38</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>hair_color</td>\n",
+              "      <td>12</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>skin_color</td>\n",
+              "      <td>31</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>5</th>\n",
+              "      <td>eye_color</td>\n",
+              "      <td>15</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>6</th>\n",
+              "      <td>birth_year</td>\n",
+              "      <td>36</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7</th>\n",
+              "      <td>sex</td>\n",
+              "      <td>4</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>8</th>\n",
+              "      <td>gender</td>\n",
+              "      <td>2</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>9</th>\n",
+              "      <td>homeworld</td>\n",
+              "      <td>48</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10</th>\n",
+              "      <td>species</td>\n",
+              "      <td>37</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>"
+            ],
+            "text/plain": [
+              "     variables  valores_unicos\n",
+              "0         name              87\n",
+              "1       height              45\n",
+              "2         mass              38\n",
+              "3   hair_color              12\n",
+              "4   skin_color              31\n",
+              "5    eye_color              15\n",
+              "6   birth_year              36\n",
+              "7          sex               4\n",
+              "8       gender               2\n",
+              "9    homeworld              48\n",
+              "10     species              37"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 58
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Z9lm-H7JlXEN"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "q2dvWHTtmej0"
+      },
+      "source": [
+        "<br>\n",
+        "\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "# C.2.1) ¿Qué es `numpy`?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "uEnElyY8mhle"
+      },
+      "source": [
+        "import numpy as np"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "jV94rfWIs-20"
+      },
+      "source": [
+        "arr1=np.array([1,2,3,4,5])"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wuR34pMrtXh0",
+        "outputId": "b1b98a29-e20a-4a33-f05d-4d9ceb92f3a7"
+      },
+      "source": [
+        "arr1"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 2, 3, 4, 5])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "itbIWebQtYIu",
+        "outputId": "bfae7207-4339-427d-ac7d-99e4f0db495d"
+      },
+      "source": [
+        "arr1+arr1"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([ 2,  4,  6,  8, 10])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o9SR0siKwHw5",
+        "outputId": "4dafefda-782b-4b14-a565-fd86ce018732"
+      },
+      "source": [
+        "arr1.shape # ranking 1"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(5,)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "7w8F16kvwGkO"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9yxksq9yvEuG"
+      },
+      "source": [
+        "¿Cómo crear un \"tabla\" en numpy? \n",
+        "\n",
+        "Rank 2 array / 2D"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Vl1K6UipuLL5",
+        "outputId": "30bfa619-f7db-484c-a658-27c50099a7a7"
+      },
+      "source": [
+        "arr2=np.array([[1,2,3,4,5], [9,8,7,6,5]])\n",
+        "\n",
+        "arr2"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 2, 3, 4, 5],\n",
+              "       [9, 8, 7, 6, 5]])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QGDfksX8uyoW",
+        "outputId": "c2b325fa-bf84-4d9b-e101-eedb05063daf"
+      },
+      "source": [
+        "arr2.shape"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(2, 5)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Fup8L7rfxMtT"
+      },
+      "source": [
+        "Rank 3 array / 3D"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bqFsF670vK0n"
+      },
+      "source": [
+        "arr3=np.array([[[1,2,3,4,5], [9,8,7,6,5]]])"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o7_ZpY1xw9mw",
+        "outputId": "906e29d6-c30f-44df-a258-686a089fcd4d"
+      },
+      "source": [
+        "arr3.shape"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 5)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3huODa991yri"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "---\n",
+        "\n",
+        "\n",
+        "### Inscripción al Curso gratuito [Deep Learning 360 Nivel 1](https://escueladedatosvivos.ai/p/curso-gratuito-deep-learning-360-nivel-1)\n",
+        "\n",
+        "Si bien es avanzado si están empezando en Phyton, les dejo el link para que miren el programa.\n",
+        "\n",
+        "<img src=\"https://drive.google.com/uc?export=view&id=1afYCadpB4TDNUVFPQbfpz_bVBmlDccNp\" width=\"400px\">\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "---\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "brueird_xAPf"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dApZmci1-txe"
+      },
+      "source": [
+        "### C.2.2) ¿Cómo hacer `reshape` en numpy?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kvraE8qU-t94",
+        "outputId": "56a5070a-6205-4f0a-d54f-38ca5496423d"
+      },
+      "source": [
+        "arr3=np.array([1,2,3,4,5,6])\n",
+        "print(arr3)\n",
+        "print(arr3.shape)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[1 2 3 4 5 6]\n",
+            "(6,)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gsainvYu_N54",
+        "outputId": "6f831f37-1260-48a9-8335-886136460970"
+      },
+      "source": [
+        "arr4=arr3.reshape((2,3))\n",
+        "\n",
+        "arr4"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 2, 3],\n",
+              "       [4, 5, 6]])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RnBoAXGL_UBE",
+        "outputId": "dd105917-4ad6-4e8e-eeb1-3e92f29401a3"
+      },
+      "source": [
+        "arr4.shape"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(2, 3)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 41
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hM0ESIjuA10y"
+      },
+      "source": [
+        "¿Cómo hacer flatten de un numpy array?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i8UDMH0hAtqz",
+        "outputId": "5d9fa37d-36be-4e12-d9e4-42923b630b33"
+      },
+      "source": [
+        "arr5=arr4.flatten()\n",
+        "arr5"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 2, 3, 4, 5, 6])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 42
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "OH4aKg2D_XU9"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Eelr5hzPCQU0"
+      },
+      "source": [
+        "### C.2.3) ¿Cómo hacer slice de numpy?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-thB6iq0CpDo",
+        "outputId": "5d795de4-d0b7-4b4b-c783-88a6ec313ba6"
+      },
+      "source": [
+        "arr1"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 2, 3, 4, 5])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 56
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ee7oWKopCZJA",
+        "outputId": "0148a8e9-4918-4aa1-da16-ba99c1485630"
+      },
+      "source": [
+        "# 1er elemento\n",
+        "arr1[0]"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 55
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EDpmpja7CrWn",
+        "outputId": "9ed22a9f-1538-41e7-dc32-216aa96c30df"
+      },
+      "source": [
+        "arr1[0:3]"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 2, 3])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 58
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0J2X5c-sDHkz"
+      },
+      "source": [
+        "### C.2.4) ¿Cómo acceder a arrays n-dimensionales?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YygaoyS-C49s",
+        "outputId": "fa908ff4-cec6-4460-a134-7dcb9112958c"
+      },
+      "source": [
+        "arr4"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 2, 3],\n",
+              "       [4, 5, 6]])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 60
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I_PlzGPWCFvn",
+        "outputId": "336f818f-2d33-413e-a29d-7cb78a160e67"
+      },
+      "source": [
+        "arr4[0,:]"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 2, 3])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 59
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "45tMun8LCW61",
+        "outputId": "1c69e241-1e20-4c06-f271-4cf187f9899a"
+      },
+      "source": [
+        "arr4[1,0]"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 64
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mrLmYIs1C8tV",
+        "outputId": "15e7604c-ece5-43c4-bf84-d60f76f4cbbf"
+      },
+      "source": [
+        "arr4[1,0:2]"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([4, 5])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 66
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iPVrpeENDRiZ",
+        "outputId": "7046e9f7-c1a0-4989-b316-721b538be347"
+      },
+      "source": [
+        "# acceder a toda la 1er dimensión\n",
+        "arr4[0] "
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 2, 3])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 71
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZOkr3C5iI3Lg"
+      },
+      "source": [
+        "Imagen resumen numpy\n",
+        "\n",
+        "<img src=\"https://fgnt.github.io/python_crashkurs_doc/_images/numpy_array_t.png\" width=\"300px\">\n",
+        "\n",
+        "[Fuente](https://fgnt.github.io/python_crashkurs_doc/include/numpy.html)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qzIrY0fXI_GR"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5-n5jOVQJ19x"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "## Próximos pasos!\n",
+        "\n",
+        "El siguiente paso si querés ir hacia Machine Learning, es estudiar en nuestro curso [Intro a Estadística con Python](https://escueladedatosvivos.ai/p/curso-gratuito-estadistica-para-machine-learning-con-python).\n",
+        "\n",
+        "Si preferis tener un panorama general de los lenguajes mas usados en Data, seguí con el curso [Desembarcando en R > 2da edición](https://escueladedatosvivos.ai/p/curso-desembarcando-en-r-2da-edicion-gratis)."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FnIjUBVPJx2r"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "## Ejercicios\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "1hW-Sw4EKPki"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
